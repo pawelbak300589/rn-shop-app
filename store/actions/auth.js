@@ -30,7 +30,7 @@ export const signup = (email, password) => {
 
     console.log(redData);
 
-    dispatch({ type: SIGNUP, })
+    dispatch({ type: SIGNUP, token: redData.idToken, userId: redData.localId });
   };
 };
 
@@ -65,6 +65,6 @@ export const login = (email, password) => {
 
     console.log(redData);
 
-    dispatch({ type: LOGIN, })
+    dispatch({ type: LOGIN, token: redData.idToken, userId: redData.localId });
   };
 };
