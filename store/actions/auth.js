@@ -102,7 +102,7 @@ const clearLogoutTimer = () => {
   }
 };
 
-const setLogoutTimer = (expirationTime) => {
+const setLogoutTimer = (expirationTime) => { // auto logout warning on Android because of timeout warning: https://github.com/facebook/react-native/issues/12981
   return dispatch => {
     timer = setTimeout(() => {
       dispatch(logout());
